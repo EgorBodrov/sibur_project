@@ -31,6 +31,9 @@ from typing import Dict
 
 from kedro.pipeline import Pipeline
 
+from sibur_eda.pipelines import data_overview as dv
+from sibur_eda.pipelines import data_plots as dp
+
 
 def register_pipelines() -> Dict[str, Pipeline]:
     """Register the project's pipelines.
@@ -38,4 +41,12 @@ def register_pipelines() -> Dict[str, Pipeline]:
     Returns:
         A mapping from a pipeline name to a ``Pipeline`` object.
     """
-    return {"__default__": Pipeline([])}
+
+    data_overview_pipeline = dv.create_pipeline()
+    data_plots_pipeline = dp.create_pipeline()
+
+    return {
+        "__default__": data_overview_pipeline + data_plots_pipeline,
+        "dv": data_overview_pipeline,
+        "dp": data_plots_pipeline,
+    }
