@@ -1,0 +1,12 @@
+Column name,Number of NaN
+timestamp,0
+A_rate,1
+A_CH4,959
+A_C2H6,959
+A_C3H8,959
+A_iC4H10,959
+A_nC4H10,959
+A_iC5H12,959
+A_nC5H12,959
+A_C6H14,959
+B_rate,133

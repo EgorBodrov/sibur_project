@@ -18,3 +18,93 @@ piechart:
 correlation:
   type: kedro.extras.datasets.matplotlib.MatplotlibWriter
   filepath: data/cor.png
+
+head_values:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/head_values.csv
+
+tail_values:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/tail_values.csv 
+
+statistics_values:
+  type: pandas.CSVDataSet
+  save_args:
+    index: True
+  filepath: data/03_primary/statistics_values.csv 
+
+NaN_values:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/NaN_values.csv 
+
+regressor_A_CH4:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_CH4.pickle
+  versioned: true
+
+A_CH4:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_CH4.png
+
+regressor_A_C2H6:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_C2H6.pickle
+  versioned: true
+
+A_C2H6:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_C2H6.png
+
+regressor_A_C3H8:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_C3H8.pickle
+  versioned: true
+
+A_C3H8:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_C3H8.png
+
+regressor_A_iC4H10:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_iC4H10.pickle
+  versioned: true
+
+A_iC4H10:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_iC4H10.png
+
+regressor_A_nC4H10:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_nC4H10.pickle
+  versioned: true
+
+A_nC4H10:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_nC4H10.png
+
+regressor_A_iC5H12:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_iC5H12.pickle
+  versioned: true
+
+A_iC5H12:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_iC5H12.png
+
+regressor_A_nC5H12:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_nC5H12.pickle
+  versioned: true
+
+A_nC5H12:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_nC5H12.png
+
+regressor_A_C6H14:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor_A_C6H14.pickle
+  versioned: true
+
+A_C6H14:
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+  filepath: data/A_C6H14.png

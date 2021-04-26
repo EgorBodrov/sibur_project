@@ -1,5 +1,5 @@
 from kedro.pipeline import Pipeline, node
-from .nodes import make_plot, make_piechart, make_correlation
+from .nodes import *
 
 def create_pipeline(**kwargs):
 	return Pipeline(
@@ -21,6 +21,54 @@ def create_pipeline(**kwargs):
                 inputs="sibur",
                 outputs="correlation",
                 name="correlation_node",
+            ),
+            node(
+                func=make_A_CH4,
+                inputs="result_A_CH4",
+                outputs="A_CH4",
+                name="A_CH4_plot",
+            ),
+            node(
+                func=make_A_C2H6,
+                inputs="result_A_C2H6",
+                outputs="A_C2H6",
+                name="A_C2H6_plot",
+            ),
+            node(
+                func=make_A_C3H8,
+                inputs="result_A_C3H8",
+                outputs="A_C3H8",
+                name="A_C3H8_plot",
+            ),
+            node(
+                func=make_A_iC4H10,
+                inputs="result_A_iC4H10",
+                outputs="A_iC4H10",
+                name="A_iC4H10_plot",
+            ),
+            node(
+                func=make_A_nC4H10,
+                inputs="result_A_nC4H10",
+                outputs="A_nC4H10",
+                name="A_nC4H10_plot",
+            ),
+            node(
+                func=make_A_iC5H12,
+                inputs="result_A_iC5H12",
+                outputs="A_iC5H12",
+                name="A_iC5H12_plot",
+            ),
+            node(
+                func=make_A_nC5H12,
+                inputs="result_A_nC5H12",
+                outputs="A_nC5H12",
+                name="A_nC5H12_plot",
+            ),
+            node(
+                func=make_A_C6H14,
+                inputs="result_A_C6H14",
+                outputs="A_C6H14",
+                name="A_C6H14_plot",
             ),
         ]
     )

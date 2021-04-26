@@ -33,6 +33,7 @@ from kedro.pipeline import Pipeline
 
 from sibur_eda.pipelines import data_overview as dv
 from sibur_eda.pipelines import data_plots as dp
+from sibur_eda.pipelines import data_science as ds
 
 
 def register_pipelines() -> Dict[str, Pipeline]:
@@ -44,9 +45,11 @@ def register_pipelines() -> Dict[str, Pipeline]:
 
     data_overview_pipeline = dv.create_pipeline()
     data_plots_pipeline = dp.create_pipeline()
+    data_science_pipeline = ds.create_pipeline()
 
     return {
-        "__default__": data_overview_pipeline + data_plots_pipeline,
+        "__default__": data_overview_pipeline + data_plots_pipeline + data_science_pipeline,
         "dv": data_overview_pipeline,
         "dp": data_plots_pipeline,
+        "ds": data_science_pipeline,
     }

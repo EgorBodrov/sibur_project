@@ -1,5 +1,5 @@
 from kedro.pipeline import Pipeline, node
-from .nodes import head_view, tail_view, statistics_view
+from .nodes import head_view, tail_view, statistics_view, nan_view
 
 def create_pipeline(**kwargs):
 	return Pipeline(
@@ -21,6 +21,12 @@ def create_pipeline(**kwargs):
                 inputs="sibur",
                 outputs="statistics_values",
                 name="statistics_values_node",
+            ),
+            node(
+                func=nan_view,
+                inputs="sibur",
+                outputs="NaN_values",
+                name="NaN_values_node",
             )
         ]
     )
