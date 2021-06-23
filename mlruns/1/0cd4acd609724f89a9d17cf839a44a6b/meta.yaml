@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Python/sibur_eda/mlruns/1/0cd4acd609724f89a9d17cf839a44a6b/artifacts
+end_time: 1624462545267
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 0cd4acd609724f89a9d17cf839a44a6b
+run_uuid: 0cd4acd609724f89a9d17cf839a44a6b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1624462542242
+status: 3
+tags: []
+user_id: USER
