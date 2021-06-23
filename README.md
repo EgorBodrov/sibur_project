@@ -2,6 +2,8 @@
 
 ## Overview
 
+![image](https://user-images.githubusercontent.com/63846736/123131656-9494fc80-d456-11eb-8046-b3c673cac726.png)
+
 This is your new Kedro project, which was generated using `Kedro 0.17.2`.
 
 Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
